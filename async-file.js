@@ -6,6 +6,7 @@ fs.readFile("./texts/read.txt", "utf-8", (err, data) => {
   if (err) {
     throw Error("Error reading text");
   }
+  console.log(data);
 
   // writing text asynchronously
 
