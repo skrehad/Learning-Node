@@ -9,9 +9,7 @@ server.on("request", (req, res) => {
   if (req.url === "/read-file" && req.method === "GET");
 
   // streaming file reading
-  const readableStream = fs.createReadStream(
-    process.cwd() + "/texts/readbhul.txt"
-  );
+  const readableStream = fs.createReadStream(process.cwd() + "/texts/read.txt");
 
   readableStream.on("data", (buffer) => {
     res.statusCode = 200;
